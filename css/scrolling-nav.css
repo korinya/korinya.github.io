@@ -10,17 +10,24 @@
 
  .navbar {
    background-color: #bbbd8e;
-
  }
- a {
+ .navbar-light .navbar-nav .nav-link
+ {
    color:white;
+ }
+ .navbar-light .navbar-brand
+ {
+   color:white;
+ }
 
- }
- a:hover {
-   color:black;
- }
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link
+{color:#392a75;}
+
 header {
   padding: 156px 0 100px;
+}
+span.navbar-toggler-icon{
+  color:white;
 }
 
 section {
@@ -29,18 +36,14 @@ section {
 
 header {
   position: relative;
-  background-color: black;
-  height: 100vh;
-  width: 100%;
+  height: 100%;
   overflow: hidden;
+
 }
 
 header img{
   top:0;
   position: absolute;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   width:100%;
 }
 
@@ -50,17 +53,8 @@ header .container {
   z-index: 2;
 }
 
-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.5;
-  z-index: 1;
-
-}
+#videos {
+align-items: center;}
 #about {
   padding:15%;
 }
@@ -77,6 +71,7 @@ body, html {
   background-image: url("../img/small_group.jpg");
   /* Full height */
   height: 100%;
+  width:100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -84,17 +79,31 @@ body, html {
   background-size: cover;
 }
 
+@media screen and (max-width: 1100px) {
+  header {
+    height:80%;
+  }
+  .parallax {
+  display:none;
+  }
+  #about {
+    padding:3px;
+  }
+  #music {
+    padding:50px 3px;
+  }
+.lead {
+  font-size:16px;
+}
+}
+@media screen and (max-width: 875px){
+  header {
+    height:60%;
+  }
+}
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
   .parallax {
     background-attachment: scroll;
-  }
-}
-@media (pointer: coarse) and (hover: none) {
-  header {
-    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
-  }
-  header video {
-    display: none;
   }
 }
