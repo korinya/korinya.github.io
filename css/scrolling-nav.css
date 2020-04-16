@@ -6,7 +6,9 @@
  body {
    font-family: 'Work Sans', sans-serif;
    color: #707057;
+   overflow-x:hidden;
  }
+
 
 a {
   color:#707057;
@@ -206,3 +208,27 @@ h2 {
 margin-top:60%!important;
 }
 }
+
+.lyrics{
+  margin-top:60px;
+  margin-bottom:300px;
+}
+
+audio {
+  width: 600px;
+  box-shadow: 5px 5px 20px rgba(0,0, 0, 0.4);
+  border-radius: 90px;
+  transform: scale(1.05);
+}
+.vesnianky-description{
+  margin-top:120px;
+}
+/*
+.audio-player{
+  background-color:black;
+} */
+
+/* .vesnianky {
+  background-image:url("img/vesniankycover-01.png");
+  width:100%;
+} */
