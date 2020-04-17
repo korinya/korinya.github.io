@@ -344,6 +344,8 @@ iframe {
 }
 
 .lyrics-section{
+  letter-spacing: 1px;
+
   background-color:#025646;
   color:#eddd98;
 font-family: 'Roboto', sans-serif;
