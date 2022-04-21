@@ -11,13 +11,31 @@
 
 
 a {
-  color:#707057;
+  color:#DEE3C8;
 }
 a:hover {
   color:#392a75;
 }
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+
+  color:#E0E1D2;
+}
+
+.navbar-light .navbar-brand:hover{
+  color:#E0E1D2;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:active{
+  color:#C7CDFF;
+}
+.active {
+  color:#C7CDFF;
+
+}
  .navbar {
-   background-color: #bbbd8e;
+   background-color: #152624;
+   box-shadow: 0px 4px 30px rgba(103, 103, 103, 0.25);
  }
  .navbar-light .navbar-nav .nav-link
  {
@@ -29,13 +47,33 @@ a:hover {
  }
 
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link
-{color:#392a75;}
+{color:#C7CDFF;}
 
+.nav-link:active{
+  color:#C7CDFF;
+
+}
+.navbar-light .navbar-toggler-icon {
+  color:white;
+}
 header {
   padding: 156px 0 100px;
 }
 span.navbar-toggler-icon{
   color:white;
+}
+
+
+.newmusic{
+margin-right:20px;border-radius:68px;background-color:white;
+color:black;
+}
+@media screen and (max-width: 991px) {
+.newmusic{
+background-color:rgba(0, 0, 0, 0);
+color:white!important;
+}
+
 }
 
 section {
@@ -169,7 +207,10 @@ padding-bottom: 50% }
     width:600px;
     height:337px;
   }
-
+iframe.video{
+  width:100%;
+  height:30rem;
+}
 }
 
 @media screen and (max-width:721px){
@@ -186,17 +227,17 @@ padding-bottom: 50% }
 
 }
 @media screen and (max-width:550px){
-img.logo{
-    margin-top:0!important;
-  }
-  header {
-margin-top:10%;  }
+  /* img.logo{
+    margin-top:-60%!important;
+  } */
+  /* header {
+margin-top:10%;  } */
   iframe.spotify{
     height:500px!important;
   }
-  h2 {
+  /* h2 {
   margin-top:-29px!important;
-  }
+  } */
 }
 @media screen and (max-width:360px){
   /* header{
@@ -241,7 +282,7 @@ margin-top:60px;
   height:1000px;
 } */
 
-#banner_block .banner_image {
+#banner_block > .banner_image, #banner_block_newmusic > .banner_image {
     position: absolute;
     top: -3%;
     left: -3%;
@@ -253,16 +294,25 @@ margin-top:60px;
 
 }
 
-#banner_block {
+#banner_block, #banner_block_newmusic {
     bottom:0!important;
 }
 .hnalbum__banner-image--aligned-center {
     background-position: center;
 }
-.hnalbum__banner-image--is-blurred {
+#banner_block > .hnalbum__banner-image--is-blurred {
     background-image: url(../img/background-blur2.png);
 }
-#banner_block .album_cover_wrapper {
+
+
+/*background image for the New Music page*/
+#banner_block_newmusic > .hnalbum__banner-image--is-blurred {
+    background-image: url(../img/lisom-coverPhoto-02.png);
+    filter: blur(10px);
+
+}
+
+#banner_block .album_cover_wrapper, #banner_block_newmusic .album_cover_wrapper {
     width: 100%;
     max-width: 850px;
     margin: auto;}
@@ -271,7 +321,7 @@ margin-top:60px;
     border-color: rgba(255,255,255,0);
     background-color: rgba(255,255,255,.5);
 } */
-#banner_block .album_cover {
+#banner_block .album_cover, #banner_block_newmusic .album_cover  {
     /* width: 400px;
     height: 400px;
     background-position: center;
@@ -279,12 +329,11 @@ margin-top:60px;
     background-repeat: no-repeat;
     border: 15px solid rgba(0,0,0,.5);
     background-color: rgba(0,0,0,.5); */
-    margin-left: 33.33%;
+    /* margin-left: 33.33%; */
     box-sizing: border-box;
     position: relative;
-    margin-top: -6%;
 }
-#banner_block .album_cover .play_overlay {
+#banner_block .album_cover .play_overlay, #banner_block_newmusic .album_cover .play_overlay{
     opacity: 0;
     position: absolute;
     width: 370px;
@@ -302,10 +351,10 @@ height: 1px;
 
 
 @media screen and (max-width:875px){
-  #banner_block .album_cover {
+  #banner_block .album_cover, #banner_block_newmusic .album_cover{
     margin-left:14%;
   }
-  #banner_block .banner_image {
+  #banner_block .banner_image, #banner_block_newmusic .banner_image  {
     height:100%;
   }
 iframe {
@@ -317,7 +366,7 @@ iframe {
 }
 @media screen and (max-width:660px){
 
-  #banner_block .album_cover {
+  #banner_block .album_cover,#banner_block_newmusic .album_cover {
     margin-left:0%;
   }
 }
